@@ -1,0 +1,218 @@
+{
+  "name": "clinicAI",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "961d5cc8-5872-417c-ba9f-34eb915cde77",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "fd351403-4e02-40af-9c64-7e31295112f5",
+      "name": "Webhook",
+      "webhookId": "961d5cc8-5872-417c-ba9f-34eb915cde77"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1PHBFArcdcbQfkk5kYRzEHgGeAhG0lZ3r9Jng2CZNdgs",
+          "mode": "list",
+          "cachedResultName": "ClinicAI-sheets",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1PHBFArcdcbQfkk5kYRzEHgGeAhG0lZ3r9Jng2CZNdgs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Hoja 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1PHBFArcdcbQfkk5kYRzEHgGeAhG0lZ3r9Jng2CZNdgs/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nombre": "={{ $json.body.nombre }}",
+            "Apellido": "={{ $json.body.apellido }}",
+            "DNI": "={{ $json.body.dni }}",
+            "Email": "={{ $json.body.email }}",
+            "Especialidad": "={{ $json.body.especialidad }}",
+            "Fecha": "={{ $json.body.fecha }}",
+            "Horario": "={{ $json.body.horario }}",
+            "Obra_social": "={{ $json.body.obra_social }}",
+            "Motivo_consulta": "={{ $json.body.motivo_consulta }}",
+            "Teléfono": "={{ $json.body.telefono }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nombre",
+              "displayName": "Nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Apellido",
+              "displayName": "Apellido",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DNI",
+              "displayName": "DNI",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Teléfono",
+              "displayName": "Teléfono",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Especialidad",
+              "displayName": "Especialidad",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Fecha",
+              "displayName": "Fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Horario",
+              "displayName": "Horario",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Obra_social",
+              "displayName": "Obra_social",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Motivo_consulta",
+              "displayName": "Motivo_consulta",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        0
+      ],
+      "id": "a4cf96f2-9eb0-45d1-821c-a5184783aef6",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "myS6nGk0seOybX59",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.retellai.com/v2/create-phone-call",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        416,
+        0
+      ],
+      "id": "de2f7594-a688-4cd2-b272-1b5e4a045974",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "70c7ad7e-eeba-4333-a066-30a44c4f37a8",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "afcec07357379f4741221ffd667ee3f3635b7ec74200a0d972c07c46bf60e7d6"
+  },
+  "id": "XKK0WYZWcQ7k0QUO",
+  "tags": []
+}
