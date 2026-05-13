@@ -95,6 +95,23 @@ ClinicAI/
 - Prompt del Agente: Configurar el agente de voz en Retell con las directrices de triage médico y empatía profesional[cite: 1].
 
 ---
+
+## 🛠️ Flujo de Automatización (Backend)
+
+Para demostrar la integridad del sistema, el flujo de trabajo se desglosa de la siguiente manera:
+
+- Webhook Inbound: Nodo que escucha el POST del frontend con los datos del paciente.  
+
+- Data Transformation: Nodo de función para limpiar el número de teléfono y formatear el nombre.  
+
+- CRM Integration: Nodo de Google Sheets que inserta la fila con un ID único.  
+
+- Voice AI Trigger: Nodo HTTP que envía el agent_id y el to_number a la API de Retell.  
+
+- Prompt Engineering: El agente utiliza un prompt estructurado para triage médico, validando síntomas y confirmando el turno.
+
+---
+
 ## 👤 Autor
 
 **Franco Santacatalina**
