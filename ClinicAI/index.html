@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClinicAI — Medicina de Vanguardia con Inteligencia Artificial</title>
+  <meta name="description" content="ClinicAI: Guardia 24hs, Shock Room y más de 10 especialidades médicas. Atención de excelencia potenciada por Inteligencia Artificial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ PARTICLES ═══════════════════ -->
+  <div class="particles-container" id="particles"></div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.png" alt="ClinicAI Logo" class="logo-img" />
+        <span class="logo-text">Clinic<span class="logo-accent">AI</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios" class="nav-link">Guardia</a></li>
+        <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
+        <li><a href="#stats" class="nav-link">Nosotros</a></li>
+        <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+        <li><a href="#contacto" class="nav-link nav-link-cta">Turnos</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#servicios" class="mobile-link">Guardia</a></li>
+      <li><a href="#especialidades" class="mobile-link">Especialidades</a></li>
+      <li><a href="#stats" class="mobile-link">Nosotros</a></li>
+      <li><a href="#testimonios" class="mobile-link">Testimonios</a></li>
+      <li><a href="#contacto" class="mobile-link">Turnos</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge reveal-fade">
+          <span class="badge-dot"></span>
+          🤖 Medicina potenciada con Inteligencia Artificial
+        </div>
+        <h1 class="hero-title reveal-fade reveal-delay-1">
+          Salud de <span class="gradient-text">Vanguardia</span><br />para Toda la Familia
+        </h1>
+        <p class="hero-subtitle reveal-fade reveal-delay-2">
+          Guardia 24 horas, Shock Room y más de 10 especialidades médicas.<br />
+          Tecnología de última generación al servicio de tu bienestar.
+        </p>
+        <div class="hero-actions reveal-fade reveal-delay-3">
+          <a href="#contacto" class="btn-primary" id="cta-turnos">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Sacar Turno Online
+          </a>
+          <a href="#servicios" class="btn-secondary" id="cta-servicios">
+            Ver Servicios
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+          </a>
+        </div>
+        <div class="hero-trust reveal-fade reveal-delay-4">
+          <div class="trust-item">
+            <span class="trust-icon">✅</span>
+            <span>Guardia 24hs</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-icon">🏥</span>
+            <span>Shock Room</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-item">
+            <span class="trust-icon">📅</span>
+            <span>Turnos Online</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-fade reveal-delay-2">
+        <div class="hero-img-wrapper">
+          <div class="hero-glow-ring"></div>
+          <img src="images/hero_visual.png" alt="ClinicAI Technology" class="hero-img float-anim" />
+          <div class="hero-badge-float badge-float-1">
+            <span class="badge-float-icon">❤️</span>
+            <div><strong>Cardiología</strong><br/><small>Disponible hoy</small></div>
+          </div>
+          <div class="hero-badge-float badge-float-2">
+            <span class="badge-float-icon">🧠</span>
+            <div><strong>Neurología</strong><br/><small>Sin esperas</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SOCIAL PROOF ═══════════════════ -->
+  <section class="social-proof" id="social-proof">
+    <div class="container">
+      <p class="proof-label">Respaldado por excelencia médica</p>
+      <div class="proof-logos">
+        <div class="proof-logo-item">🏥 ANMAT</div>
+        <div class="proof-logo-item">🩺 COFESA</div>
+        <div class="proof-logo-item">⚕️ A.M.A.</div>
+        <div class="proof-logo-item">🌐 OPS/OMS</div>
+        <div class="proof-logo-item">📋 ISO 9001</div>
+        <div class="proof-logo-item">🔬 CEMIC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SERVICIOS / GUARDIA ═══════════════════ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">🚨 Atención Inmediata</span>
+        <h2 class="section-title">Guardia &amp; <span class="gradient-text">Urgencias</span></h2>
+        <p class="section-subtitle">Disponibles las 24 horas, los 365 días del año. Porque las emergencias no esperan.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Card 1 - Médico Clínico -->
+        <div class="service-card-flip scroll-reveal">
+          <div class="service-card-inner">
+            <div class="service-card-front">
+              <img src="images/service_1.png" alt="Guardia Médica" class="service-image" />
+              <div class="service-overlay">
+                <div class="service-icon-front">🩺</div>
+                <h3 class="service-title-front">Médico Clínico</h3>
+              </div>
+            </div>
+            <div class="service-card-back glass-card">
+              <div class="back-icon">🩺</div>
+              <h3 class="service-title-back">Médico Clínico / Generalista</h3>
+              <p class="service-description">Atención integral de guardia por médico clínico certificado. Diagnóstico rápido, tratamiento inmediato y derivación especializada cuando se requiere.</p>
+              <div class="service-features">
+                <span class="feature-tag">Guardia 24hs</span>
+                <span class="feature-tag">Diagnóstico Rápido</span>
+                <span class="feature-tag">Sin Turno Previo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 - Pediatría -->
+        <div class="service-card-flip scroll-reveal">
+          <div class="service-card-inner">
+            <div class="service-card-front">
+              <img src="images/service_2.png" alt="Pediatría" class="service-image" />
+              <div class="service-overlay">
+                <div class="service-icon-front">👶</div>
+                <h3 class="service-title-front">Pediatría</h3>
+              </div>
+            </div>
+            <div class="service-card-back glass-card">
+              <div class="back-icon">👶</div>
+              <h3 class="service-title-back">Guardia Pediátrica</h3>
+              <p class="service-description">Atención especializada para niños y adolescentes. Nuestros pediatras están disponibles las 24hs para brindarte tranquilidad en cada momento.</p>
+              <div class="service-features">
+                <span class="feature-tag">Recién Nacidos</span>
+                <span class="feature-tag">Adolescentes</span>
+                <span class="feature-tag">24hs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 - Shock Room -->
+        <div class="service-card-flip scroll-reveal">
+          <div class="service-card-inner">
+            <div class="service-card-front">
+              <img src="images/service_3.png" alt="Shock Room" class="service-image" />
+              <div class="service-overlay">
+                <div class="service-icon-front">⚡</div>
+                <h3 class="service-title-front">Shock Room</h3>
+              </div>
+            </div>
+            <div class="service-card-back glass-card">
+              <div class="back-icon">⚡</div>
+              <h3 class="service-title-back">Shock Room</h3>
+              <p class="service-description">Sala de reanimación equipada con tecnología de última generación. Nuestro equipo de trauma responde en segundos ante situaciones críticas de alto riesgo.</p>
+              <div class="service-features">
+                <span class="feature-tag">Alta Complejidad</span>
+                <span class="feature-tag">Equipo Trauma</span>
+                <span class="feature-tag">Tecnología Premium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 - Cardiología destacada -->
+        <div class="service-card-flip scroll-reveal">
+          <div class="service-card-inner">
+            <div class="service-card-front">
+              <img src="images/service_4.png" alt="Cardiología" class="service-image" />
+              <div class="service-overlay">
+                <div class="service-icon-front">❤️</div>
+                <h3 class="service-title-front">Cardiología</h3>
+              </div>
+            </div>
+            <div class="service-card-back glass-card">
+              <div class="back-icon">❤️</div>
+              <h3 class="service-title-back">Cardiología</h3>
+              <p class="service-description">Diagnóstico y tratamiento de enfermedades cardiovasculares con equipamiento de última generación. ECG digital, ecocardiograma y monitoreo Holter.</p>
+              <div class="service-features">
+                <span class="feature-tag">ECG Digital</span>
+                <span class="feature-tag">Ecocardiograma</span>
+                <span class="feature-tag">Holter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ESPECIALIDADES ═══════════════════ -->
+  <section class="section section-dark" id="especialidades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">📅 Consultorios Externos</span>
+        <h2 class="section-title">Nuestras <span class="gradient-text">Especialidades</span></h2>
+        <p class="section-subtitle">10 especialidades médicas en un solo lugar. Reservá tu turno online en minutos.</p>
+      </div>
+
+      <div class="specialties-grid">
+        <div class="specialty-card scroll-reveal" id="spec-cardio">
+          <div class="specialty-icon">❤️</div>
+          <h3>Cardiología</h3>
+          <p>Corazón y sistema cardiovascular</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-derma">
+          <div class="specialty-icon">🧴</div>
+          <h3>Dermatología</h3>
+          <p>Piel, cabello y uñas</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-gastro">
+          <div class="specialty-icon">🫁</div>
+          <h3>Gastroenterología</h3>
+          <p>Sistema digestivo y hepático</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-gine">
+          <div class="specialty-icon">🌸</div>
+          <h3>Ginecología</h3>
+          <p>Salud femenina integral</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-otorri">
+          <div class="specialty-icon">👂</div>
+          <h3>Otorrinolaringología</h3>
+          <p>Oídos, nariz y garganta</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-oftalmo">
+          <div class="specialty-icon">👁️</div>
+          <h3>Oftalmología</h3>
+          <p>Salud visual y ocular</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-trauma">
+          <div class="specialty-icon">🦴</div>
+          <h3>Traumatología</h3>
+          <p>Huesos, articulaciones y músculos</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-uro">
+          <div class="specialty-icon">🔬</div>
+          <h3>Urología</h3>
+          <p>Sistema urinario y masculino</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-neuro">
+          <div class="specialty-icon">🧠</div>
+          <h3>Neurología</h3>
+          <p>Sistema nervioso central y periférico</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+        <div class="specialty-card scroll-reveal" id="spec-endo">
+          <div class="specialty-icon">⚗️</div>
+          <h3>Endocrinología</h3>
+          <p>Hormonas y metabolismo</p>
+          <a href="#contacto" class="specialty-cta">Sacar Turno →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ STATS ═══════════════════ -->
+  <section class="section stats-section" id="stats">
+    <div class="container">
+      <div class="stats-wrapper">
+        <div class="stats-content">
+          <span class="section-label">📊 Números que hablan</span>
+          <h2 class="section-title" style="text-align:left">Por qué elegir <span class="gradient-text">ClinicAI</span></h2>
+          <p class="section-subtitle" style="text-align:left">Una clínica que combina la calidez humana con la precisión de la tecnología más avanzada.</p>
+          <ul class="features-list">
+            <li><span class="feat-check">✓</span> Resultados de laboratorio digitales en 2 horas</li>
+            <li><span class="feat-check">✓</span> Historia clínica electrónica unificada</li>
+            <li><span class="feat-check">✓</span> Telemedicina y consultas remotas</li>
+            <li><span class="feat-check">✓</span> App para turnos y seguimiento de salud</li>
+          </ul>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card glass-card scroll-reveal">
+            <span class="stat-number" data-target="15000">0</span>
+            <span class="stat-suffix">+</span>
+            <span class="stat-label">Pacientes atendidos</span>
+          </div>
+          <div class="stat-card glass-card scroll-reveal">
+            <span class="stat-number" data-target="10">0</span>
+            <span class="stat-suffix">+</span>
+            <span class="stat-label">Especialidades</span>
+          </div>
+          <div class="stat-card glass-card scroll-reveal">
+            <span class="stat-number" data-target="99">0</span>
+            <span class="stat-suffix">%</span>
+            <span class="stat-label">Satisfacción</span>
+          </div>
+          <div class="stat-card glass-card scroll-reveal">
+            <span class="stat-number" data-target="24">0</span>
+            <span class="stat-suffix">hs</span>
+            <span class="stat-label">Guardia disponible</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TESTIMONIOS ═══════════════════ -->
+  <section class="section section-dark" id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">💬 Testimonios</span>
+        <h2 class="section-title">Lo que dicen nuestros <span class="gradient-text">Pacientes</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card scroll-reveal">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"La atención en guardia fue increíble. En menos de 10 minutos ya tenía diagnóstico y tratamiento. El equipo médico es excelente y las instalaciones son de primer nivel."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MG</div>
+            <div>
+              <strong>María González</strong>
+              <span>Paciente de Guardia</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card scroll-reveal">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Saqué turno con Cardiología desde la app en 2 minutos. El cardiólogo me explicó todo con claridad y los resultados del ECG llegaron al instante al sistema. Tecnología de punta."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CR</div>
+            <div>
+              <strong>Carlos Rodríguez</strong>
+              <span>Paciente de Cardiología</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card scroll-reveal">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Llevé a mi hijo a la guardia pediátrica a las 3am. La atención fue rápida, amable y profesional. Los pediatras son increíbles. Ya no iría a ningún otro lugar."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AL</div>
+            <div>
+              <strong>Ana López</strong>
+              <span>Mamá paciente pediátrico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CTA FINAL ═══════════════════ -->
+  <section class="section cta-section" id="contacto">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <div class="section-label">🚀 Tu salud, nuestra prioridad</div>
+      <h2 class="cta-title">¿Listo para cuidar tu <span class="gradient-text">Salud</span>?</h2>
+      <p class="cta-subtitle">Sacá tu turno online en menos de 2 minutos.<br/>Nuestro equipo médico está esperándote.</p>
+      <div class="cta-actions">
+        <a href="tel:+541100000000" class="btn-primary pulse-btn" id="btn-llamar">
+          📞 Llamar Ahora
+        </a>
+        <a href="https://wa.me/5491100000000" class="btn-secondary" id="btn-whatsapp" target="_blank">
+          💬 WhatsApp
+        </a>
+      </div>
+      <div class="cta-info">
+        <span>📍 Av. Corrientes 1234, Buenos Aires</span>
+        <span>•</span>
+        <span>🕐 Guardia 24hs / 365 días</span>
+        <span>•</span>
+        <span>📧 info@clinicai.com.ar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <img src="images/logo.png" alt="ClinicAI" class="logo-img" />
+          <span class="logo-text">Clinic<span class="logo-accent">AI</span></span>
+        </a>
+        <p class="footer-tagline">Medicina de vanguardia<br/>al servicio de tu salud.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Facebook">👤</a>
+          <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <a href="#servicios">Guardia 24hs</a>
+          <a href="#servicios">Shock Room</a>
+          <a href="#servicios">Pediatría</a>
+          <a href="#especialidades">Consultorios</a>
+        </div>
+        <div class="footer-col">
+          <h4>Especialidades</h4>
+          <a href="#especialidades">Cardiología</a>
+          <a href="#especialidades">Neurología</a>
+          <a href="#especialidades">Ginecología</a>
+          <a href="#especialidades">Traumatología</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="tel:+541100000000">📞 (011) 0000-0000</a>
+          <a href="mailto:info@clinicai.com.ar">✉️ info@clinicai.com.ar</a>
+          <a href="#">📍 Av. Corrientes 1234</a>
+          <a href="#">🕐 24hs / 365 días</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2025 ClinicAI. Todos los derechos reservados.</span>
+        <span>Proyecto de Portafolio — Diseño & Desarrollo Web</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ MODAL TURNO ═══════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+
+      <!-- Close button -->
+      <button class="modal-close" id="modalClose" aria-label="Cerrar formulario">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- ── FORMULARIO ── -->
+      <div class="modal-form-view" id="modalFormView">
+        <div class="modal-header">
+          <div class="modal-icon">📅</div>
+          <h2 class="modal-title" id="modalTitle">Solicitar Turno</h2>
+          <p class="modal-subtitle">Completá los datos y te confirmamos tu cita en minutos.</p>
+        </div>
+
+        <form id="appointmentForm" novalidate>
+
+          <!-- Fila 1: Nombre + Apellido -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Nombre <span class="required">*</span></label>
+              <input type="text" id="firstName" name="nombre" placeholder="Ej: María" required autocomplete="given-name" />
+              <span class="field-error" id="err-firstName"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Apellido <span class="required">*</span></label>
+              <input type="text" id="lastName" name="apellido" placeholder="Ej: González" required autocomplete="family-name" />
+              <span class="field-error" id="err-lastName"></span>
+            </div>
+          </div>
+
+          <!-- Fila 2: DNI + Teléfono -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dni">DNI <span class="required">*</span></label>
+              <input type="text" id="dni" name="dni" placeholder="Ej: 30123456" required maxlength="10" inputmode="numeric" />
+              <span class="field-error" id="err-dni"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono / Celular <span class="required">*</span></label>
+              <input type="tel" id="phone" name="telefono" placeholder="Ej: 11 1234-5678" required autocomplete="tel" />
+              <span class="field-error" id="err-phone"></span>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Correo electrónico <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@email.com" required autocomplete="email" />
+            <span class="field-error" id="err-email"></span>
+          </div>
+
+          <!-- Área / Especialidad -->
+          <div class="form-group">
+            <label for="specialty">Área / Especialidad <span class="required">*</span></label>
+            <div class="select-wrapper">
+              <select id="specialty" name="especialidad" required>
+                <option value="" disabled selected>Seleccioná la especialidad</option>
+                <optgroup label="📅 Consultorios Externos">
+                  <option value="Cardiología">Cardiología</option>
+                  <option value="Dermatología">Dermatología</option>
+                  <option value="Gastroenterología">Gastroenterología</option>
+                  <option value="Ginecología">Ginecología</option>
+                  <option value="Otorrinolaringología">Otorrinolaringología</option>
+                  <option value="Oftalmología">Oftalmología</option>
+                  <option value="Traumatología">Traumatología</option>
+                  <option value="Urología">Urología</option>
+                  <option value="Neurología">Neurología</option>
+                  <option value="Endocrinología">Endocrinología</option>
+                </optgroup>
+              </select>
+              <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6,9 12,15 18,9"/></svg>
+            </div>
+            <span class="field-error" id="err-specialty"></span>
+          </div>
+
+          <!-- Fila 3: Día + Horario -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointmentDate">Día preferido <span class="required">*</span></label>
+              <input type="date" id="appointmentDate" name="fecha" required />
+              <span class="field-error" id="err-appointmentDate"></span>
+            </div>
+            <div class="form-group">
+              <label for="appointmentTime">Horario preferido <span class="required">*</span></label>
+              <div class="select-wrapper">
+                <select id="appointmentTime" name="horario" required>
+                  <option value="" disabled selected>Seleccioná un horario</option>
+                  <option value="08:00 - 09:00">08:00 — 09:00 hs</option>
+                  <option value="09:00 - 10:00">09:00 — 10:00 hs</option>
+                  <option value="10:00 - 11:00">10:00 — 11:00 hs</option>
+                  <option value="11:00 - 12:00">11:00 — 12:00 hs</option>
+                  <option value="14:00 - 15:00">14:00 — 15:00 hs</option>
+                  <option value="15:00 - 16:00">15:00 — 16:00 hs</option>
+                  <option value="16:00 - 17:00">16:00 — 17:00 hs</option>
+                  <option value="17:00 - 18:00">17:00 — 18:00 hs</option>
+                </select>
+                <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6,9 12,15 18,9"/></svg>
+              </div>
+              <span class="field-error" id="err-appointmentTime"></span>
+            </div>
+          </div>
+
+          <!-- Obra Social -->
+          <div class="form-group">
+            <label for="insurance">Obra Social / Prepaga</label>
+            <input type="text" id="insurance" name="obra_social" placeholder="Ej: OSDE, Swiss Medical, Particular..." autocomplete="off" />
+          </div>
+
+          <!-- Motivo de consulta -->
+          <div class="form-group">
+            <label for="notes">Motivo de consulta <span class="required">*</span></label>
+            <textarea id="notes" name="motivo_consulta" rows="3" placeholder="Describí brevemente tu consulta o síntomas..." required></textarea>
+            <span class="field-error" id="err-notes"></span>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn-submit" id="btnSubmit">
+            <span class="btn-submit-text">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+              Confirmar Turno
+            </span>
+            <span class="btn-submit-loading" style="display:none;">
+              <span class="spinner"></span> Enviando...
+            </span>
+          </button>
+
+          <p class="form-disclaimer">
+            🔒 Tus datos son confidenciales y están protegidos bajo la Ley 25.326 de Habeas Data.
+          </p>
+        </form>
+      </div>
+
+      <!-- ── ESTADO ÉXITO ── -->
+      <div class="modal-success-view" id="modalSuccessView" style="display:none;">
+        <div class="success-animation">
+          <div class="success-circle">
+            <svg class="success-check" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20,6 9,17 4,12"/>
+            </svg>
+          </div>
+        </div>
+        <h2 class="success-title">¡Turno Solicitado!</h2>
+        <p class="success-subtitle">Recibimos tu solicitud correctamente.<br/>Nos comunicaremos a la brevedad para confirmar tu cita.</p>
+        <div class="success-details" id="successDetails"></div>
+        <button class="btn-primary" id="btnCloseSuccess" style="margin-top:32px;">
+          Volver al inicio
+        </button>
+      </div>
+
+      <!-- ── ESTADO ERROR ── -->
+      <div class="modal-error-banner" id="modalErrorBanner" style="display:none;">
+        ⚠️ Hubo un problema al enviar. Por favor intentá nuevamente o comunicate al (011) 0000-0000.
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
